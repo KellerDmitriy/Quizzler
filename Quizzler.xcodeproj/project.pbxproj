@@ -13,6 +13,8 @@
 		E10E13BD29EB3D7F00FAD4E4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E10E13BB29EB3D7F00FAD4E4 /* Main.storyboard */; };
 		E10E13BF29EB3D8000FAD4E4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E10E13BE29EB3D8000FAD4E4 /* Assets.xcassets */; };
 		E10E13C229EB3D8000FAD4E4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E10E13C029EB3D8000FAD4E4 /* LaunchScreen.storyboard */; };
+		E10E13CE29EC1A0300FAD4E4 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10E13CD29EC1A0300FAD4E4 /* Question.swift */; };
+		E10E13D029EC447700FAD4E4 /* QuizBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10E13CF29EC447700FAD4E4 /* QuizBrain.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		E10E13BE29EB3D8000FAD4E4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E10E13C129EB3D8000FAD4E4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E10E13C329EB3D8000FAD4E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E10E13CD29EC1A0300FAD4E4 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
+		E10E13CF29EC447700FAD4E4 /* QuizBrain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizBrain.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +60,49 @@
 		E10E13B429EB3D7F00FAD4E4 /* Quizzler */ = {
 			isa = PBXGroup;
 			children = (
-				E10E13B529EB3D7F00FAD4E4 /* AppDelegate.swift */,
-				E10E13B729EB3D7F00FAD4E4 /* SceneDelegate.swift */,
-				E10E13B929EB3D7F00FAD4E4 /* QuizzlerViewController.swift */,
-				E10E13BB29EB3D7F00FAD4E4 /* Main.storyboard */,
+				E10E13CB29EC197D00FAD4E4 /* ViewControllers */,
+				E10E13CC29EC19DB00FAD4E4 /* Models */,
+				E10E13CA29EC193700FAD4E4 /* Storyboards */,
 				E10E13BE29EB3D8000FAD4E4 /* Assets.xcassets */,
-				E10E13C029EB3D8000FAD4E4 /* LaunchScreen.storyboard */,
-				E10E13C329EB3D8000FAD4E4 /* Info.plist */,
+				E10E13C929EC192100FAD4E4 /* App */,
 			);
 			path = Quizzler;
+			sourceTree = "<group>";
+		};
+		E10E13C929EC192100FAD4E4 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				E10E13B529EB3D7F00FAD4E4 /* AppDelegate.swift */,
+				E10E13B729EB3D7F00FAD4E4 /* SceneDelegate.swift */,
+				E10E13C329EB3D8000FAD4E4 /* Info.plist */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		E10E13CA29EC193700FAD4E4 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				E10E13BB29EB3D7F00FAD4E4 /* Main.storyboard */,
+				E10E13C029EB3D8000FAD4E4 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		E10E13CB29EC197D00FAD4E4 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				E10E13B929EB3D7F00FAD4E4 /* QuizzlerViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		E10E13CC29EC19DB00FAD4E4 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E10E13CD29EC1A0300FAD4E4 /* Question.swift */,
+				E10E13CF29EC447700FAD4E4 /* QuizBrain.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,7 +176,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E10E13D029EC447700FAD4E4 /* QuizBrain.swift in Sources */,
 				E10E13BA29EB3D7F00FAD4E4 /* QuizzlerViewController.swift in Sources */,
+				E10E13CE29EC1A0300FAD4E4 /* Question.swift in Sources */,
 				E10E13B629EB3D7F00FAD4E4 /* AppDelegate.swift in Sources */,
 				E10E13B829EB3D7F00FAD4E4 /* SceneDelegate.swift in Sources */,
 			);
@@ -289,7 +329,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = KYB528F2CP;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Quizzler/Info.plist;
+				INFOPLIST_FILE = Quizzler/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -321,7 +361,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = KYB528F2CP;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Quizzler/Info.plist;
+				INFOPLIST_FILE = Quizzler/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
